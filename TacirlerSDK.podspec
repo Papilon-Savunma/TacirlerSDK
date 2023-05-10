@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name = 'TacirlerSDK'
-  s.version = '0.1.2'
+  s.version = '0.1.3'
   s.summary = 'KYC process for Tacirler Yatirim.'
 
   s.homepage = 'https://github.com/Papilon-Savunma/TacirlerSDK'
@@ -25,6 +25,6 @@ Pod::Spec.new do |s|
   s.dependency "OpenSSL-Universal", '1.1.180'
   s.dependency 'BulletinBoard'
   s.dependency 'JitsiMeetSDK', '~> 4.1.0'
-#  s.dependency 'Socket.IO-Client-Swift', '~> 16.0.1'
+  s.dependency 'Socket.IO-Client-Swift', '~> 16.0.1'
 
 end
