@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name = 'TacirlerSDK'
-  s.version = '0.1.3'
+  s.version = '0.1.4	'
   s.summary = 'KYC process for Tacirler Yatirim.'
 
   s.homepage = 'https://github.com/Papilon-Savunma/TacirlerSDK'
@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
 
   s.resource_bundles = { 'TacirlerSDK' => 'TacirlerSDK.bundle' }
 
-  s.vendored_frameworks = 'TacirlerSDK.framework'
+  s.vendored_frameworks = 'TacirlerSDK.xcframework'
 
   s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
