@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name = 'TacirlerSDK'
-  s.version = '0.1.6'
+  s.version = '0.1.7'
   s.summary = 'KYC process for Tacirler Yatirim.'
 
   s.homepage = 'https://github.com/Papilon-Savunma/TacirlerSDK'
