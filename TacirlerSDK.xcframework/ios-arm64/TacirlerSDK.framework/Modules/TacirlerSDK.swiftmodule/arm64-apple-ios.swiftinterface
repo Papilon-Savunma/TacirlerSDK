@@ -5,6 +5,8 @@
 import AVFoundation
 import BLTNBoard
 import CommonCrypto
+import CoreGraphics
+import CoreImage
 import CoreNFC
 import CryptoKit
 import CryptoTokenKit
@@ -13,12 +15,12 @@ import JitsiMeetSDK
 import Network
 import OpenSSL
 import PDFKit
-import PapilonMRZScanneriOS
 import SocketIO
 import Swift
 import SwiftyJSON
 @_exported import TacirlerSDK
 import UIKit
+import Vision
 import _Concurrency
 import _StringProcessing
 @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
@@ -300,6 +302,11 @@ public enum DataGroupId : Swift.Int, Swift.CaseIterable {
     get
   }
 }
+public typealias ScannedBoundingRects = (valid: [CoreFoundation.CGRect], invalid: [CoreFoundation.CGRect])
+public struct DocumentScanningResult<T> {
+  public let result: T
+  public let boundingRects: TacirlerSDK.ScannedBoundingRects
+}
 @available(iOS 13, macOS 10.15, *)
 public enum NFCPassportReaderError : Swift.Error {
   case ResponseError(Swift.String, Swift.UInt8, Swift.UInt8)
@@ -361,6 +368,15 @@ extension TacirlerSDK.PassiveAuthenticationError : Foundation.LocalizedError {
     get
   }
 }
+public struct ImageMRZScanner {
+  public init()
+  public func scan(scanningImage: TacirlerSDK.ScanningImage, orientation: ImageIO.CGImagePropertyOrientation, regionOfInterest: CoreFoundation.CGRect? = nil, minimumTextHeight: Swift.Float? = nil, recognitionLevel: TacirlerSDK.RecognitionLevel = .accurate, foundBoundingRectsHandler: (([CoreFoundation.CGRect]) -> Swift.Void)? = nil, completionHandler: @escaping (Swift.Result<TacirlerSDK.DocumentScanningResult<TacirlerSDK.ParsedResult>, any Swift.Error>) -> Swift.Void)
+}
+@_hasMissingDesignatedInitializers final public class LiveMRZScanner {
+  public init(frequency: Swift.Int = 2)
+  final public func scanFrame(scanningImage: TacirlerSDK.ScanningImage, orientation: ImageIO.CGImagePropertyOrientation, regionOfInterest: CoreFoundation.CGRect? = nil, minimumTextHeight: Swift.Float? = nil, foundBoundingRectsHandler: (([CoreFoundation.CGRect]) -> Swift.Void)? = nil, completionHandler: @escaping (Swift.Result<TacirlerSDK.DocumentScanningResult<TacirlerSDK.ParsedResult>, any Swift.Error>) -> Swift.Void)
+  @objc deinit
+}
 public enum LogLevel : Swift.Int, Swift.CaseIterable {
   case verbose
   case debug
@@ -388,6 +404,80 @@ public enum LogLevel : Swift.Int, Swift.CaseIterable {
   public class func error(_ msg: @autoclosure () -> Swift.String)
   public class func clearStoredLogs()
   @objc deinit
+}
+public typealias ParsedResult = TacirlerSDK.MRZResult
+public struct MRZParser {
+  public init(isOCRCorrectionEnabled: Swift.Bool)
+  public func parse(mrzLines: [Swift.String]) -> TacirlerSDK.MRZResult?
+  public func parse(mrzString: Swift.String) -> TacirlerSDK.MRZResult?
+}
+public enum MRZFormat : Swift.CaseIterable {
+  case td1, td2, td3
+  public var lineLength: Swift.Int {
+    get
+  }
+  public var linesCount: Swift.Int {
+    get
+  }
+  public static func == (a: TacirlerSDK.MRZFormat, b: TacirlerSDK.MRZFormat) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public typealias AllCases = [TacirlerSDK.MRZFormat]
+  public static var allCases: [TacirlerSDK.MRZFormat] {
+    get
+  }
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct MRZResult : Swift.Hashable {
+  public enum DocumentType : Swift.CaseIterable {
+    case visa
+    case passport
+    case id
+    case residencePermit
+    case undefined
+    public static func == (a: TacirlerSDK.MRZResult.DocumentType, b: TacirlerSDK.MRZResult.DocumentType) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public typealias AllCases = [TacirlerSDK.MRZResult.DocumentType]
+    public static var allCases: [TacirlerSDK.MRZResult.DocumentType] {
+      get
+    }
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum Sex : Swift.CaseIterable {
+    case male
+    case female
+    case unspecified
+    public static func == (a: TacirlerSDK.MRZResult.Sex, b: TacirlerSDK.MRZResult.Sex) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public typealias AllCases = [TacirlerSDK.MRZResult.Sex]
+    public static var allCases: [TacirlerSDK.MRZResult.Sex] {
+      get
+    }
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public let format: TacirlerSDK.MRZFormat
+  public let documentType: TacirlerSDK.MRZResult.DocumentType
+  public let countryCode: Swift.String
+  public let surnames: Swift.String
+  public let givenNames: Swift.String
+  public let documentNumber: Swift.String?
+  public let nationalityCountryCode: Swift.String
+  public let birthdate: Foundation.Date?
+  public let sex: TacirlerSDK.MRZResult.Sex
+  public let expiryDate: Foundation.Date?
+  public let optionalData: Swift.String?
+  public let optionalData2: Swift.String?
+  public init(format: TacirlerSDK.MRZFormat, documentType: TacirlerSDK.MRZResult.DocumentType, countryCode: Swift.String, surnames: Swift.String, givenNames: Swift.String, documentNumber: Swift.String?, nationalityCountryCode: Swift.String, birthdate: Foundation.Date?, sex: TacirlerSDK.MRZResult.Sex, expiryDate: Foundation.Date?, optionalData: Swift.String?, optionalData2: Swift.String?)
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: TacirlerSDK.MRZResult, b: TacirlerSDK.MRZResult) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
 }
 public enum PassportAuthenticationStatus {
   case notDone
@@ -619,6 +709,19 @@ extension TacirlerSDK.PassportReader : CoreNFC.NFCTagReaderSessionDelegate {
   public func tagReaderSession(_ session: CoreNFC.NFCTagReaderSession, didInvalidateWithError error: any Swift.Error)
   public func tagReaderSession(_ session: CoreNFC.NFCTagReaderSession, didDetect tags: [CoreNFC.NFCTag])
 }
+public enum RecognitionLevel {
+  case accurate
+  case fast
+  public static func == (a: TacirlerSDK.RecognitionLevel, b: TacirlerSDK.RecognitionLevel) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum ScanningImage {
+  case cgImage(CoreGraphics.CGImage)
+  case pixelBuffer(CoreVideo.CVPixelBuffer)
+}
 @available(iOS 13, *)
 public struct ResponseAPDU {
   public var data: [Swift.UInt8]
@@ -775,10 +878,18 @@ extension TacirlerSDK.DataGroupId : Swift.RawRepresentable {}
 extension TacirlerSDK.LogLevel : Swift.Equatable {}
 extension TacirlerSDK.LogLevel : Swift.Hashable {}
 extension TacirlerSDK.LogLevel : Swift.RawRepresentable {}
+extension TacirlerSDK.MRZFormat : Swift.Equatable {}
+extension TacirlerSDK.MRZFormat : Swift.Hashable {}
+extension TacirlerSDK.MRZResult.DocumentType : Swift.Equatable {}
+extension TacirlerSDK.MRZResult.DocumentType : Swift.Hashable {}
+extension TacirlerSDK.MRZResult.Sex : Swift.Equatable {}
+extension TacirlerSDK.MRZResult.Sex : Swift.Hashable {}
 extension TacirlerSDK.PassportAuthenticationStatus : Swift.Equatable {}
 extension TacirlerSDK.PassportAuthenticationStatus : Swift.Hashable {}
 extension TacirlerSDK.PACEMappingType : Swift.Equatable {}
 extension TacirlerSDK.PACEMappingType : Swift.Hashable {}
+extension TacirlerSDK.RecognitionLevel : Swift.Equatable {}
+extension TacirlerSDK.RecognitionLevel : Swift.Hashable {}
 extension TacirlerSDK.SecureMessagingSupportedAlgorithms : Swift.Equatable {}
 extension TacirlerSDK.SecureMessagingSupportedAlgorithms : Swift.Hashable {}
 @available(iOS 13, macOS 10.15, *)

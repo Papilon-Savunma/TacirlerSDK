@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name = 'TacirlerSDK'
-  s.version = '0.1.4	'
+  s.version = '0.1.5'
   s.summary = 'KYC process for Tacirler Yatirim.'
 
   s.homepage = 'https://github.com/Papilon-Savunma/TacirlerSDK'
@@ -12,8 +12,6 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '13.0'
   s.swift_versions = '5.0'
 
-  s.resource_bundles = { 'TacirlerSDK' => 'TacirlerSDK.bundle' }
-
   s.vendored_frameworks = 'TacirlerSDK.xcframework'
 
   s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
@@ -21,7 +19,6 @@ Pod::Spec.new do |s|
   
   s.frameworks = 'UIKit', 'AVFoundation'
   s.dependency 'SwiftyJSON'
-  s.dependency 'PapilonMRZScanneriOS', '1.0.6'
   s.dependency "OpenSSL-Universal", '1.1.180'
   s.dependency 'BulletinBoard'
   s.dependency 'JitsiMeetSDK', '~> 4.1.0'
