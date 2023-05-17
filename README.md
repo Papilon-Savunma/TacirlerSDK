@@ -65,61 +65,60 @@ Then, handover this view controller to a button. For example;
 ## SDK Flow
 
 
-- KVKK Approval Screen
+#### KVKK Approval Screen
 <img src="./images/IMG_0023.PNG" width="390" height="844">
 User needs to check both checkmark to proceed.
 
-- KVKK Policy and Commercial and Electronic Message Screens
+#### KVKK Policy and Commercial and Electronic Message Screens
 <img src="./images/IMG_0024.PNG" width="390" height="844">
 <img src="./images/IMG_0025.PNG" width="390" height="844">
 
-
-- MASAK Statement Screen
+#### MASAK Statement Screen
 <img src="./images/IMG_0026.PNG" width="390" height="844">
 
-- Daily and Monthly Notifications Screen
+#### Daily and Monthly Notifications Screen
 <img src="./images/IMG_0027.PNG" width="390" height="844">
 User needs to check checkmark to proceed.
 
-- NFC Availability Check Screen
+#### NFC Availability Check Screen
 <img src="./images/IMG_0028.PNG" width="390" height="844">
 In this screen NFC Availability control should be done, otherwise, user cannot proceed.
 
-- Form Screen
+#### Form Screen
 <img src="./images/IMG_0029.PNG" width="390" height="844">
 User needs to fill the form to proceed
 
-- Questionnaire Screen
+#### Questionnaire Screen
 <img src="./images/IMG_0030.PNG" width="390" height="844">
 User needs to choose one option to proceed. If they choose other or "Tacirler Investment Personal", user needs to fill text field.
 
-- Phone Number Screen
+#### Phone Number Screen
 <img src="./images/IMG_0031.PNG" width="390" height="844">
 
-- SMS OTP Code Screen
+#### SMS OTP Code Screen
 <img src="./images/IMG_0032.PNG" width="390" height="844">
 
-- MRZ Scanner Screen
+#### MRZ Scanner Screen
 <img src="./images/IMG_0033.PNG" width="390" height="844">
 TR Identity card should be shown to the camera to proceed.
 
-- NFC Reader Screen
+#### NFC Reader Screen
 <img src="./images/IMG_0036.PNG" width="390" height="844">
 <img src="./images/IMG_0037.PNG" width="390" height="844">
 TR Identity card should be shown to backside of the phone to proceed.
 
-- Information Check Screen
+#### Information Check Screen
 <img src="./images/IMG_0038.PNG" width="390" height="844">
 
-- Selfie Screen
+#### Selfie Screen
 <img src="./images/IMG_0039.PNG" width="390" height="844">
 
-- Selfie Check Screens
+#### Selfie Check Screens
 <img src="./images/IMG_0041.PNG" width="390" height="844">
 <img src="./images/IMG_0042.PNG" width="390" height="844">
 
-- Address Verification Screens
-![image](./images/IMG_00xxxxxx.PNG)
+#### Address Verification Screens
+<img src="./images/IMG_0053.PNG" width="390" height="844">
 
 1. Verification with Place of Residence
 <img src="./images/IMG_0043.PNG" width="390" height="844">
@@ -130,17 +129,17 @@ QR Code that is on the place of residence form can be scanned.
 2. Verification with Address No from E-devlet
 <img src="./images/IMG_0045.PNG" width="390" height="844">
 
-- Client Information Screen
+#### Client Information Screen
 <img src="./images/IMG_0046.PNG" width="390" height="844">
 
-- Video Call Screens
+#### Video Call Screens
 <img src="./images/IMG_0047.PNG" width="390" height="844">
 
 <img src="./images/IMG_0048.PNG" width="390" height="844">
 
 <img src="./images/IMG_0049.PNG" width="390" height="844">
 
-- Result Screens
+#### Result Screens
 <img src="./images/IMG_0051.PNG" width="390" height="844">
 Application failed
 
