@@ -61,39 +61,85 @@ Then, handover this view controller to a button. For example;
 }
 ```
 - `x` buttons on the screen is to `dismiss` the SDK. Also, when cycle ends, `home` button is to `dismiss` SDK.
-## API Usage
-**NOTE:** This is for developers who develop this SDK.
 
-API swagger address: [Tacirler API](https://umsapi.tacirler.com.tr:81/apidocs/#/)
+## SDK Flow
+- KVKK Approval Screen
+![image](./images/IMG_0023.PNG)
+User needs to check both checkmark to proceed.
 
-- `user/active_application`: Post request that checks wheter there is active client application for KYC process. If there is, app navigates to `PreviouslyAppliedViewController.swift`. If there is not app stays in `TacirlerSDKViewController.swift`.
+- KVKK Policy and Commercial and Electronic Message Screens
+![image](./images/IMG_0024.PNG) ![image](./images/IMG_0025.PNG)
 
-- `user/add`: Post request to send form data taken from `FormViewController.swift` to API.
+- MASAK Statement Screen
+![image](./images/IMG_0026.PNG)
 
-- `user/job_list`: Get request for job list for form, in `FormViewModel.swift`
+- Daily and Monthly Notifications Screen
+![image](./images/IMG_0027.PNG)
+User needs to check checkmark to proceed.
 
-- `user/city_list`: Get request for city list for form, in `FormViewModel.swift`
+- NFC Availability Check Screen
+![image](./images/IMG_0028.PNG)
+In this screen NFC Availability control should be done, otherwise, user cannot proceed.
 
-- `user/survey`: Post request to send questionnaire result to API in `QuestionnaireViewController.swift`.
+- Form Screen
+![image](./images/IMG_0029.PNG)
+User needs to fill the form to proceed
 
-- `user/otp`: Post request to send phone number to API in `PhoneNumberViewController.swift`.
+- Questionnaire Screen
+![image](./images/IMG_0030.PNG)
+User needs to choose one option to proceed. If they choose other or "Tacirler Investment Personal", user needs to fill text field.
 
-- `user/retake_otp`: Get request to get code when 180 second ends, in `PhoneNumberViewController.swift`.
+- Phone Number Screen
+![image](./images/IMG_0031.PNG)
 
-- `user/verify_otp`: Post request to send OTP code to API in `SMSCodeViewController.swift`.
+- SMS OTP Code Screen
+![image](./images/IMG_0032.PNG)
 
-- `user/nfc`: Post request to send data taken from nfc read to API in `MRZNFCResultViewController.swift`.
+- MRZ Scanner Screen
+![image](./images/IMG_0033.PNG)
+TR Identity card should be shown to the camera to proceed.
 
-- `user/face`: Post request to send face photo to API in `SelfieResultViewController.swift`. API compares the NFC photo that is sent before with the face photo.
+- NFC Reader Screen
+![image](./images/IMG_0036.PNG)![image](./images/IMG_0037.PNG)
+TR Identity card should be shown to backside of the phone to proceed.
 
-- `user/address`: Post request to send barcode text to API in `IkametgahViewController.swift`.
+- Information Check Screen
+![image](./images/IMG_0038.PNG)
 
-- `address/verify_address`: Get request that takes `adresNo` as querry parameter to verify address from "E-devlet Adres No", in `AddressViewModel.swift`.
+- Selfie Screen
+![image](./images/IMG_0039.PNG)
 
-- `user/video_call`: Get request to get video call room url in  `VideoCallViewModel.swift`.
+- Selfie Check Screens
+![image](./images/IMG_0041.PNG)![image](./images/IMG_0042.PNG)
 
-- `user/terminate_call`: Get request to recall when video call is terminated, in `APIService.swift`.
+- Address Verification Screens
+![image](./images/IMG_00xxxxxx.PNG)
 
+1. Verification with Place of Residence
+![image](./images/IMG_0043.PNG)
+
+![image](./images/IMG_0044.PNG)
+QR Code that is on the place of residence form can be scanned.
+
+2. Verification with Address No from E-devlet
+![image](./images/IMG_0045.PNG) 
+
+- Client Information Screen
+![image](./images/IMG_0046.PNG)
+
+- Video Call Screens
+![image](./images/IMG_0047.PNG)
+
+![image](./images/IMG_0048.PNG)
+
+![image](./images/IMG_0049.PNG)
+
+- Result Screens
+![image](./images/IMG_0051.PNG)
+Application failed
+
+![image](./images/IMG_0052.PNG)
+Application succeded
 
 
 ## Author
