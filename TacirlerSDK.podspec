@@ -1,12 +1,12 @@
 Pod::Spec.new do |s|
   s.name             = 'TacirlerSDK'
-  s.version          = '0.2.0'
+  s.version          = '0.2.1'
   s.summary          = 'KYC process for Tacirler Yatirim.'
 
   s.homepage         = 'https://github.com/Papilon-Savunma/TacirlerSDK'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { '' => '' }
-  s.source = { :git => 'https://github.com/Papilon-Savunma/TacirlerSDK.git', :tag => '0.2.0' }
+  s.source = { :git => 'https://github.com/Papilon-Savunma/TacirlerSDK.git', :tag => '0.2.1' }
 
   s.ios.deployment_target = '13.0'
   s.swift_versions = '5.0'
