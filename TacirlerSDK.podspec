@@ -17,9 +17,9 @@ Pod::Spec.new do |s|
 
   s.vendored_frameworks = 'TacirlerSDK.framework'
 
-  s.source_files = 'TacirlerSDK/Classes/**/*'
-
   s.resource_bundles = { 'TacirlerSDK' => ['TacirlerSDK/Assets/*.{png,pdf,pem}'] }
+
+  s.requires_arc = true
   
   s.frameworks = 'UIKit', 'AVFoundation'
   s.dependency 'SwiftyJSON'
@@ -27,6 +27,5 @@ Pod::Spec.new do |s|
   s.dependency 'BulletinBoard'
   s.dependency 'JitsiMeetSDK', '~> 5.0.0'
   s.dependency 'Socket.IO-Client-Swift', '~> 16.0.1'
-
 
 end
