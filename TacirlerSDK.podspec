@@ -22,4 +22,8 @@ Pod::Spec.new do |s|
   s.dependency 'JitsiMeetSDK', '~> 5.0.0'
   s.dependency 'Socket.IO-Client-Swift', '~> 16.0.1'
 
+  s.pod_target_xcconfig = {
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'x86_64'
+  }
+
 end
