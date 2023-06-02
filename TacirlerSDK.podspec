@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'TacirlerSDK'
-  s.version          = '0.2.9'
+  s.version          = '0.3.0'
   s.summary          = 'KYC process for Tacirler Yatirim.'
 
   s.homepage         = 'https://github.com/Papilon-Savunma/TacirlerSDK'
@@ -13,11 +13,6 @@ Pod::Spec.new do |s|
 
   s.vendored_frameworks = 'TacirlerSDK.framework'
 
-  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'x86_64' }
-  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'x86_64' }
-
-  s.pod_target_
-
   s.requires_arc = true
   
   s.frameworks = 'UIKit', 'AVFoundation'
@@ -26,4 +21,7 @@ Pod::Spec.new do |s|
   s.dependency 'BulletinBoard'
   s.dependency 'JitsiMeetSDK', '~> 5.0.0'
   s.dependency 'Socket.IO-Client-Swift', '~> 16.0.1'
+  
+  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'x86_64' }
+  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'x86_64' }
 end
