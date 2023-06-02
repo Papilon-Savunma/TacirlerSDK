@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'TacirlerSDK'
-  s.version          = '0.2.4'
+  s.version          = '0.2.6'
   s.summary          = 'KYC process for Tacirler Yatirim.'
 
   s.homepage         = 'https://github.com/Papilon-Savunma/TacirlerSDK'
@@ -11,16 +11,12 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '13.0'
   s.swift_versions = '5.0'
 
-  s.requires_arc = true
+  s.vendored_frameworks = 'TacirlerSDK.framework'
 
   s.source_files = 'TacirlerSDK/Classes/**/*.{h,m,swift}', 'TacirlerSDK.framework/Headers/*.h'
   s.exclude_files = 'TacirlerSDK/Classes/**/Info.plist'
-  
-  s.vendored_frameworks = 'TacirlerSDK.framework'
-  
-  s.resource_bundles = { 
-    'TacirlerSDK' => ['TacirlerSDK/**/*'] 
-  }
+
+  s.requires_arc = true
   
   s.frameworks = 'UIKit', 'AVFoundation'
   s.dependency 'SwiftyJSON'
