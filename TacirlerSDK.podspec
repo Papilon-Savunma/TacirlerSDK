@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'TacirlerSDK'
-  s.version          = '0.2.6'
+  s.version          = '0.2.7'
   s.summary          = 'KYC process for Tacirler Yatirim.'
 
   s.homepage         = 'https://github.com/Papilon-Savunma/TacirlerSDK'
@@ -12,9 +12,6 @@ Pod::Spec.new do |s|
   s.swift_versions = '5.0'
 
   s.vendored_frameworks = 'TacirlerSDK.framework'
-
-  s.source_files = 'TacirlerSDK/Classes/**/*.{h,m,swift}', 'TacirlerSDK.framework/Headers/*.h'
-  s.exclude_files = 'TacirlerSDK/Classes/**/Info.plist'
 
   s.requires_arc = true
   
