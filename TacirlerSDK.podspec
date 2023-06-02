@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'TacirlerSDK'
-  s.version          = '0.3.0'
+  s.version          = '0.3.1'
   s.summary          = 'KYC process for Tacirler Yatirim.'
 
   s.homepage         = 'https://github.com/Papilon-Savunma/TacirlerSDK'
@@ -20,8 +20,5 @@ Pod::Spec.new do |s|
   s.dependency "OpenSSL-Universal", '1.1.180'
   s.dependency 'BulletinBoard'
   s.dependency 'JitsiMeetSDK', '~> 5.0.0'
-  s.dependency 'Socket.IO-Client-Swift', '~> 16.0.1'
-  
-  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'x86_64' }
-  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'x86_64' }
+  s.dependency 'Socket.IO-Client-Swift'
 end
