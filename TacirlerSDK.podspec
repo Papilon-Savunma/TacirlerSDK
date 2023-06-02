@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'TacirlerSDK'
-  s.version          = '0.2.3'
+  s.version          = '0.2.4'
   s.summary          = 'KYC process for Tacirler Yatirim.'
 
   s.homepage         = 'https://github.com/Papilon-Savunma/TacirlerSDK'
@@ -13,10 +13,13 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
 
-  s.source_files = 'TacirlerSDK.framework/Headers/*.h'
+  s.source_files = 'TacirlerSDK/Classes/**/*.{h,m,swift}', 'TacirlerSDK.framework/Headers/*.h'
+  s.exclude_files = 'TacirlerSDK/Classes/**/Info.plist'
+  
   s.vendored_frameworks = 'TacirlerSDK.framework'
-  s.resource_bundles = {
-    'TacirlerSDK' => ['TacirlerSDK.bundle/*']
+  
+  s.resource_bundles = { 
+    'TacirlerSDK' => ['TacirlerSDK/Assets/*.{png,pdf,pem}'] 
   }
   
   s.frameworks = 'UIKit', 'AVFoundation'
@@ -25,5 +28,4 @@ Pod::Spec.new do |s|
   s.dependency 'BulletinBoard'
   s.dependency 'JitsiMeetSDK', '~> 5.0.0'
   s.dependency 'Socket.IO-Client-Swift', '~> 16.0.1'
-
 end
