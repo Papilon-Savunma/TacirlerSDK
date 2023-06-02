@@ -18,7 +18,7 @@
 		</data>
 		<key>Modules/TacirlerSDK.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		/SUN50p1E1rBQfjboxtCHwHmzNo=
+		9eveGeGQyevXpHFsBQlGMl6ymBU=
 		</data>
 		<key>Modules/TacirlerSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Modules/TacirlerSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		GmZOBHQSferkTujJIWtTHVuFh1g=
+		9USItWK86bAlZMWlTymiSMLbzts=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -73,7 +73,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZIWpGiD5kvyvet4TjH9U6Xy9380fqi2RgGqNhFaKW94=
+			3Zy+TqtCaaxAiX4NsGn8JKcPMYocMpWW0jGufsr6eEI=
 			</data>
 		</dict>
 		<key>Modules/TacirlerSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
@@ -94,7 +94,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			sGP1ivdbgm9k1hdojgawux1Pbbr9TqRsz5YvR++RqUg=
+			zPU2m3ZGtXWk+6oYJ/9XIXh1/3M1hOF6rcdquuDxDTU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
