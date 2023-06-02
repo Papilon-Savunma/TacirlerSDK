@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
   s.vendored_frameworks = 'TacirlerSDK.framework'
   
   s.resource_bundles = { 
-    'TacirlerSDK' => ['TacirlerSDK/Assets/*.{png,pdf,pem}'] 
+    'TacirlerSDK' => ['TacirlerSDK/**/*'] 
   }
   
   s.frameworks = 'UIKit', 'AVFoundation'
