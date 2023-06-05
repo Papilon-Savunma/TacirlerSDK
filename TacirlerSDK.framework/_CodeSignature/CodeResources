@@ -4,13 +4,9 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>.DS_Store</key>
-		<data>
-		Ap0jG60aowZT8tCGzBnQNgOGa1M=
-		</data>
 		<key>Headers/TacirlerSDK-Swift.h</key>
 		<data>
-		d8k1IS6tah11gvW+Lxl10WqqTbU=
+		UJs917LJHMmaud98dJhTEiGoWPU=
 		</data>
 		<key>Headers/TacirlerSDK-umbrella.h</key>
 		<data>
@@ -18,11 +14,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		8LsCF7bz8ADchGV7Yblsr+W9I74=
+		ZUbZFDkuZ8yaY4/Fp54ywPCphAU=
 		</data>
 		<key>Modules/TacirlerSDK.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		9eveGeGQyevXpHFsBQlGMl6ymBU=
+		Kzwg6ik+rZYKXM3au/AOwu5tu3Y=
+		</data>
+		<key>Modules/TacirlerSDK.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
+		<data>
+		EceGnh4Q4Lw+dUtZrpHmI8r2BuQ=
 		</data>
 		<key>Modules/TacirlerSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -30,11 +30,23 @@
 		</data>
 		<key>Modules/TacirlerSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		EMuP5wuQCQfcLnZY/HnbRxTAZG4=
+		o3NxsNdrhulwMdyAVyjMP6icthw=
 		</data>
 		<key>Modules/TacirlerSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		9USItWK86bAlZMWlTymiSMLbzts=
+		9T0HSo6dn7IhA7cQZVaCoo4ftO0=
+		</data>
+		<key>Modules/TacirlerSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
+		<data>
+		FSPnLbho3G+LL9smI3XgVOqBIQ4=
+		</data>
+		<key>Modules/TacirlerSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
+		<data>
+		TYix2UAjScURLdy5oFIz6wb+sng=
+		</data>
+		<key>Modules/TacirlerSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
+		<data>
+		tJ+GHOgI5IEP/3vpc0Q64QWdn8I=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -42,7 +54,7 @@
 		</data>
 		<key>TacirlerSDK.bundle/Info.plist</key>
 		<data>
-		1X7vN7A+E7Kr6oxaFgzHlCY00S8=
+		7o1AZdxmNAT8X3i5ckqg09OElH8=
 		</data>
 		<key>TacirlerSDK.bundle/KVKK-Politika.pdf</key>
 		<data>
@@ -63,7 +75,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			IGyrHthZm4Ky68VTUIG+E4xxN56O4X4XGNwork2phWY=
+			B32C8mLvqQvamMidktmWans8KVNN37aozSK/VftC4MI=
 			</data>
 		</dict>
 		<key>Headers/TacirlerSDK-umbrella.h</key>
@@ -77,7 +89,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			3Zy+TqtCaaxAiX4NsGn8JKcPMYocMpWW0jGufsr6eEI=
+			+UqTu3a8Ryii3YT7flwRKCy43J6vcDbt9IHad1JC+Kc=
+			</data>
+		</dict>
+		<key>Modules/TacirlerSDK.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			jI/m/GQw2ug3kHLuDUlOZHTfJvqlek5X+mid9+1sZ4o=
 			</data>
 		</dict>
 		<key>Modules/TacirlerSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
@@ -91,14 +110,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			KIigIFZkK7UEmshYchs09oiRE4CMdn8KZFACF3tptu4=
+			u+hFP4ko/63q6DXmEXYn9yU1x7eJzjry7uQSYYOmNBs=
 			</data>
 		</dict>
 		<key>Modules/TacirlerSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zPU2m3ZGtXWk+6oYJ/9XIXh1/3M1hOF6rcdquuDxDTU=
+			sny6Stx6er1Ja+7KBgXlQZb9aaCBtzkx7k79lDK51FE=
+			</data>
+		</dict>
+		<key>Modules/TacirlerSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			KnRdWE4y6t4QM5zi5JDptPdHFgJy1Tku+7GLkZS2aNM=
+			</data>
+		</dict>
+		<key>Modules/TacirlerSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			zKm3DbomHfV8dPriTcPjtNa2YtAUfxh1x1T5eltji0g=
+			</data>
+		</dict>
+		<key>Modules/TacirlerSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			0kB8UUGPlgzcpTyF6x7oQAjVF5lAIVfRqsji8X0ItPg=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -112,7 +152,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jeESg0Gu12cj6nIX/MYWv3FHRh/Po9VjMpp6/XIAoaI=
+			YDC9zVolmxB+e+Y9KKNk2zV7JBr7jdJyJfZ0P0zfj8E=
 			</data>
 		</dict>
 		<key>TacirlerSDK.bundle/KVKK-Politika.pdf</key>
