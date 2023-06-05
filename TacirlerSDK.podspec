@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'TacirlerSDK'
-  s.version          = '0.3.5'
+  s.version          = '0.3.1'
   s.summary          = 'KYC process for Tacirler Yatirim.'
 
   s.homepage         = 'https://github.com/Papilon-Savunma/TacirlerSDK'
@@ -11,9 +11,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '13.0'
   s.swift_versions = '5.0'
 
-  #s.vendored_frameworks = 'TacirlerSDK.framework'
-  #s.xcframeworks = { 'ios-arm64' => 'TacirlerSDK.xcframework' }
-  s.vendored_frameworks = 'TacirlerSDK.xcframework'
+  s.vendored_frameworks = 'TacirlerSDK.framework'
 
   s.requires_arc = true
   
