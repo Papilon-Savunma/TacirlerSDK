@@ -18,7 +18,7 @@
 		</data>
 		<key>Modules/TacirlerSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		1Asg4G54CND/dvwIFScFqE8MZF8=
+		K4bnNvwO2GkJS5cbGjn01vSOYKk=
 		</data>
 		<key>Modules/TacirlerSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -34,11 +34,11 @@
 		</data>
 		<key>Modules/TacirlerSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		QKTlCsU3LwO/WNK0N9k50NW8tpc=
+		g89hlVAyK6NcxPECysAkpbt7V7w=
 		</data>
 		<key>Modules/TacirlerSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		1Asg4G54CND/dvwIFScFqE8MZF8=
+		K4bnNvwO2GkJS5cbGjn01vSOYKk=
 		</data>
 		<key>Modules/TacirlerSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Modules/TacirlerSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		s7vQYR5wyboDNKF4Ohb6eOwnPdQ=
+		p4tNsDKmxUqQZzxEYaITqfOlRP4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -97,7 +97,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			nBcvxuWe/ID989of8SR4HgCSB1IhM1rNnFdtrQ4/nG8=
+			D0XjQZ72UroqJUwjVMT51KrQCuj1MbWcjxe1YL/p1vM=
 			</data>
 		</dict>
 		<key>Modules/TacirlerSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -125,14 +125,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			QnNMsUTkRkAs8nKYithGHN+jPtrpH9holQlXH7sHAH0=
+			zLbS2+UDewOWjWyKIvKbXq/G88ShB3al9xj6h/nf0oQ=
 			</data>
 		</dict>
 		<key>Modules/TacirlerSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			nBcvxuWe/ID989of8SR4HgCSB1IhM1rNnFdtrQ4/nG8=
+			D0XjQZ72UroqJUwjVMT51KrQCuj1MbWcjxe1YL/p1vM=
 			</data>
 		</dict>
 		<key>Modules/TacirlerSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -160,7 +160,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			y2uWtu3Nbfyai909cGuGkHsikI6coqeIT5fglxFHEqY=
+			HqLU678HYG76B+rSVCg6kyEDdbpOP134Bc3KaEc8WCQ=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
