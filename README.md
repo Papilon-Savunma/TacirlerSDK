@@ -1,6 +1,6 @@
 # TacirlerSDK
 
-[![pod - 0.1.7](https://img.shields.io/badge/pod-0.1.7-blue)](https://cocoapods.org/)
+[![pod - 0.3.9](https://img.shields.io/badge/pod-0.3.9-blue)](https://cocoapods.org/)
 
 ## Requirements
 
